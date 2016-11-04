@@ -1,0 +1,15 @@
+<h1>Hello Dev-o-clock</h1>
+
+<p>
+We're going to deploy new javascript without redeploying rails
+</p>
+
+<div class="version-toggler">
+  {{#if showingVersion}}
+    <div class="version">
+      Version: {{version}}
+    </div>
+  {{else}}
+    <button class="show-version-button" {{action "showVersion"}}>What version is this?</button>
+  {{/if}}
+</div>

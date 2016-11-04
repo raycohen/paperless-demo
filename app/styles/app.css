@@ -1,0 +1,21 @@
+body {
+  color: #fff;
+  background-color: #000;
+  font-family: sans-serif;
+  /*font-family: monospace;*/
+  font-size: 500%;
+  text-align: center;
+}
+
+
+.version-toggler {
+  font-size: 100%;
+}
+.version-toggler button{
+  font-size: 100%;
+  cursor: pointer;
+}
+
+.version {
+  font-size: 50%;
+}
