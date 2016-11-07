@@ -27,18 +27,18 @@ module.exports = function(deployTarget) {
 
   if (deployTarget === 'qa' || deployTarget === 'prod') {
     ENV.build.environment = 'production';
-    ENV.s3.accessKeyId = process.env.AWS_KEY;
-    ENV.s3.secretAccessKey = process.env.AWS_SECRET;
+    ENV.s3.accessKeyId = process.env.DEVOCLOCK_AWS_KEY;
+    ENV.s3.secretAccessKey = process.env.DEVOCLOCK_AWS_SECRET;
     ENV.s3.bucket = 'devoclock';
-    ENV.s3.region = 'US Standard';
+    ENV.s3.region = 'us-east-1';
   }
 
   if (deployTarget === 'qa') {
-    ENV.redis.url = process.env.QA_REDIS_URL;
+    ENV.redis.url = process.env.DEVOCLOCK_REDIS_TOGO_URL;
   }
 
   if (deployTarget === 'prod') {
-    ENV.redis.url = process.env.PROD_REDIS_URL;
+    ENV.redis.url = process.env.DEVOCLOCK_REDIS_TOGO_URL;
   }
 
   return ENV;
