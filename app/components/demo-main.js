@@ -8,7 +8,7 @@ export default Ember.Component.extend({
       return {version: 'unknown'};
     }
 
-    return metaTag.getAttribute('content');
+    return JSON.parse(metaTag.getAttribute('content'));
   },
   actions: {
     showVersion() {
