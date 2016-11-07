@@ -2,10 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   showingVersion: false,
-  version: function() {
-    let metaTag = document.querySelector('meta[name=version]');
+  demoData: function() {
+    let metaTag = document.querySelector('meta[name=demo-data]');
     if (!metaTag) {
-      return 'unknown';
+      return {version: 'unknown'};
     }
 
     return metaTag.getAttribute('content');
