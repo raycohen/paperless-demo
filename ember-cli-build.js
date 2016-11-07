@@ -2,9 +2,17 @@
 /* global require, module */
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
+var env = EmberApp.env();
+
 module.exports = function(defaults) {
+  var fingerprintOptions = {};
+
+  if (env === 'production') {
+    fingerprintOptions.prepend = 'https://s3.amazonaws.com/devoclock/paperless-demo/'
+  }
+
   var app = new EmberApp(defaults, {
-    // Add options here
+    fingerprint: fingerprintOptions
   });
 
   // Use `app.import` to add additional libraries to the generated
