@@ -42,9 +42,9 @@ module.exports = function(environment) {
     ENV.APP.rootElement = '#ember-testing';
   }
 
-  ENV.routerRootUrl = '/';
+  ENV.routerRootURL = '/';
   if (environment === 'production') {
-    ENV.routerRootUrl = '/demo';
+    ENV.routerRootURL = '/demo';
   }
 
   return ENV;
